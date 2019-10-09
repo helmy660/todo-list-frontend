@@ -26,10 +26,14 @@ class Home extends Component {
 
   // to mark item as Completed
   markComplete = (id) => {
+    let userID = this.state.user.userID;
     this.setState({
         todos: this.state.todos.map(todo => {
             if(todo.ID === id) {
-                todo.completed = !todo.completed;
+              todo.completed = 1;
+              axios.put(`https://payme-backend.herokuapp.com/user/${userID}/todo/${id}`)
+              .then(res => console.log(res.data.msg)
+              );
             }
             return todo;
         })
@@ -45,18 +49,19 @@ class Home extends Component {
 
  // to add item
   addTodo = (title) => {
-    let user =  this.state.user.userID;  
+    let user =  this.state.user.userID;
     axios.post(`https://payme-backend.herokuapp.com/user/${user}/todo`, {
       todo: {
         title: title,
         completed: 0
       }  
     })
-    .then(res => 
+    .then(res => {
+        window.location.reload(false);        
         this.setState({
             todos: [...this.state.todos, res.data.data]
         })
-    );
+    });  
   }
 
   render() {
