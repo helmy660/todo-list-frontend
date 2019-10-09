@@ -19,7 +19,7 @@ export class TodoItem extends Component {
         const { ID, title, completed } = this.props.todo;
         return (
             <div style={ this.getStyle() }>
-                <p>
+                <p className="itemContainer">
                     <input type="checkbox" onChange={ this.props.markComplete.bind(this, ID ) } checked={ completed ? 'checked': '' }/>{' '}
                     {title}
                     <button onClick={this.props.delTodo.bind(this, ID)} style={{ float: 'right' }}>

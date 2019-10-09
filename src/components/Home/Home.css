@@ -1,8 +1,8 @@
 .home {
     width: 30%;
     height: 100%;
-    margin: 0% 60%;
-    opacity: 0.8;
+    margin: 2% 60%;
+    opacity: 0.9;
     overflow: auto;
     
 }
@@ -19,4 +19,18 @@
 	font-style: italic;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 2em;
+}
+
+.addFiled {
+    display: block;
+    width: 100%;
+    flex: '10';
+    padding: 2%;
+}
+
+.itemContainer {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    display: block;
 }

@@ -116,7 +116,8 @@ export default class SignUp extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>userName</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="userName"
                                 type="text" 
                                 placeholder="Enter Your userName"
@@ -129,7 +130,8 @@ export default class SignUp extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>email</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="email"                                
                                 type="text" 
                                 placeholder="Enter Your email"
@@ -142,7 +144,8 @@ export default class SignUp extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>image URL</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="imageURL"
                                 type="text" 
                                 placeholder="Enter Your image URL"
@@ -155,7 +158,8 @@ export default class SignUp extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>Password</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="password"                                 
                                 type="password" 
                                 placeholder="Enter Valid Password"
@@ -168,7 +172,8 @@ export default class SignUp extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>Confirm Password</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="confirmPassword"                                 
                                 type="confirmPassword" 
                                 placeholder="Confirm Password"

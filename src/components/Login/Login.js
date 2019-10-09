@@ -87,6 +87,7 @@ export default class Login extends React.Component {
                         <Label className="inputLabel" sm={10}>email</Label>
                         <Col sm={{ size: 10, order: 2, offset: 1 }}>
                             <Input 
+                                className="loginFiled"
                                 refs="email"                                
                                 type="text" 
                                 placeholder="Enter Your email"
@@ -99,7 +100,8 @@ export default class Login extends React.Component {
                     <FormGroup row>
                         <Label className="inputLabel" sm={10}>Password</Label>
                         <Col sm={10}>
-                            <Input 
+                            <Input
+                                className="loginFiled" 
                                 refs="password"                                 
                                 type="password" 
                                 placeholder="Enter Your Password"

@@ -21,10 +21,10 @@ export class AddTodo extends Component {
     render() {
         return (
             <form className="todoForm">
-                <input 
+                <input
+                    className="addFiled"
                     type="text" 
                     name="title"
-                    style={{flex: '10', padding: '5px'}}
                     placeholder="Add Todo..." 
                     value={this.state.title}
                     onChange={this.onChange}
