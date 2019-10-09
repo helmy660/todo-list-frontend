@@ -1,5 +1,6 @@
 import React from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, Container} from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input, Container, NavLink} from 'reactstrap';
+import { Link } from 'react-router-dom';
 import "./Login.css"
 
 export default class Login extends React.Component {
@@ -77,6 +78,7 @@ export default class Login extends React.Component {
     }
 
     render() {
+        const loginErrors =  this.state.loginErrors;
         return (   
             <Container className="login">
                 <h2>Login</h2>
@@ -113,6 +115,12 @@ export default class Login extends React.Component {
                         </Col>
                     </FormGroup>
                 </Form>
+                <div className="switch">
+                  <NavLink tag={Link} to={'/signup'}>Create new account?</NavLink>
+                </div> 
+                <div className="errors">
+                    { Object.keys(loginErrors).map(key => (<div key={key}> Error: {loginErrors[key]}</div>)) }
+                </div>
             </Container> 
         );
     }

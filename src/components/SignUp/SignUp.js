@@ -1,5 +1,7 @@
 import React from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input, Container,  NavLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 import "../Login/Login.css";
 
 export default class SignUp extends React.Component {
@@ -67,7 +69,6 @@ export default class SignUp extends React.Component {
 
     signUpClicked = event => {
         event.preventDefault();
-        this.refs.signbtn.setAttribute("disabled", "disabled");
         if(this.handleSignUpValidation()) {
           let user = {
             user: {
@@ -184,9 +185,12 @@ export default class SignUp extends React.Component {
                                 className="submitForm" 
                                 onClick = {this.signUpClicked}>Sign Up
                             </Button>
-                        </Col>
+                        </Col> 
                     </FormGroup>
                 </Form>
+                <div className="switch">
+                  <NavLink tag={Link} to={'/login'}>Have an account?</NavLink>
+                </div> 
                 <div className="errors">
                     { Object.keys(signUpErrors).map(key => (<div key={key}> Error: {signUpErrors[key]}</div>)) }
                 </div>

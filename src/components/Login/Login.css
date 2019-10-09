@@ -2,7 +2,7 @@
 .login {
     opacity: 0.7;
     width: 18%;
-    margin: 0% 74%;
+    margin: 5% 74%;
     border-radius: 2%;
     padding: 2% 2%;
     border-style: solid;
@@ -61,4 +61,9 @@ h2 {
     text-align: left;
     color: red;
     display: inline-block;
+}
+
+.switch {
+    margin-top: 3%;
+    text-align: center;
 }
