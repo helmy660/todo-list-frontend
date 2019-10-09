@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from './components/Login/Login';
-import Todo from './components/Todo/Todo';
+import Home from './components/Home/Home';
 import NavBar from './components/Navbar/Navbar';
 import SignUp from './components/SignUp/SignUp';
 
@@ -19,7 +19,7 @@ export default () => {
       <Switch>
         <Route exact path={["/", "/login"]} component={Login} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/todo" component= {Todo} />
+        <Route exact path="/home" component= {Home} />
         <Route component= {NoMatchPage} />
       </Switch>
     </Router>

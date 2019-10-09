@@ -1,0 +1,22 @@
+.home {
+    width: 30%;
+    height: 100%;
+    margin: 0% 60%;
+    opacity: 0.8;
+    overflow: auto;
+    
+}
+
+.homeContainer {
+    width: 100%;
+    height: auto;
+}
+
+.todoLabel {
+    text-align: center;
+	font-weight: 30%;
+	color: #8f8a8a;
+	font-style: italic;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2em;
+}

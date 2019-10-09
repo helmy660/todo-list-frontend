@@ -46,7 +46,7 @@ export default class Login extends React.Component {
                     password : this.state.loginFields["password"]
                 }
             }
-            fetch("http://localhost:4000/login", {
+            fetch("https://payme-backend.herokuapp.com/login", {
                 method: "POST",
                 headers: {
                 Accept: 'application/json', 
@@ -61,7 +61,7 @@ export default class Login extends React.Component {
                             const user = response.data;
                             localStorage.setItem('user', JSON.stringify(user));
                             this.props.history.push({
-                                pathname: '/todo',
+                                pathname: '/home',
                                 state: { user }
                             })
                         } else {

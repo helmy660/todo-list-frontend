@@ -77,7 +77,7 @@ export default class SignUp extends React.Component {
               imageURL: this.state.signUpFields["imageURL"]
             }
           };
-          fetch("http://localhost:4000/signup", {
+          fetch("https://payme-backend.herokuapp.com/signup", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -91,7 +91,7 @@ export default class SignUp extends React.Component {
                 if(response.code === 200) {
                   alert("Successfully Created an account ... Welcome to Todo List");
                   this.props.history.push({
-                    pathname: '/todo',
+                    pathname: '/home',
                     state: { user: response.data }
                   })
                 } else {
